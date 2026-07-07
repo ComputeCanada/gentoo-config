@@ -223,7 +223,7 @@ sys-fabric/opensm
 sys-fs/cryptsetup
 sys-fs/fuse
 sys-fs/fuse-overlayfs
-=sys-fs/ncdu-1.22
+sys-fs/ncdu
 sys-fs/squashfs-tools
 sys-fs/squashfuse
 
@@ -233,7 +233,7 @@ sys-libs/pam-compat
 sys-process/htop
 sys-process/lsof
 sys-process/numactl
-=sys-process/nvtop-3.1.0
+sys-process/nvtop
 sys-process/parallel
 
 virtual/wine
