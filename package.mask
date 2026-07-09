@@ -21,3 +21,5 @@ dev-lang/rust
 >sys-fs/ncdu-1.22
 # mask newer nvtop (bug on A100)
 >sys-process/nvtop-3.1.0
+# mask newer pygobject (dep for gst-python)
+>=dev-python/pygobject-3.52:3
