@@ -16,4 +16,5 @@ fi
 eend $? "Try to remove ${CONFIGDIR}"
 
 # remove temporary package files from bootstrap
+rm -f "${CONFIGDIR}"/profile/package.use.mask
 rm -f "${CONFIGDIR}"/make.profile/package.*
