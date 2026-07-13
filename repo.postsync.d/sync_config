@@ -14,3 +14,6 @@ else
 	git clone -q https://github.com/ComputeCanada/gentoo-config.git "${CONFIGDIR}"
 fi
 eend $? "Try to remove ${CONFIGDIR}"
+
+# remove temporary package files from bootstrap
+rm -f "${CONFIGDIR}"/make.profile/package.*
