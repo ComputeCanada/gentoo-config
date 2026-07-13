@@ -1,0 +1,11 @@
+src_prepare() {
+	haskell-cabal_src_prepare
+
+	if use prefix; then
+		sed -i -e "s,/var/db/pkg,${EPREFIX}&,g" \
+			"${S}/src/Distribution/Gentoo/Packages.hs" || die
+
+		sed -i -e 's,"/","'"${EPREFIX}"'/",g' \
+			"${S}/src/Distribution/Gentoo/GHC.hs" || die
+	fi
+}
