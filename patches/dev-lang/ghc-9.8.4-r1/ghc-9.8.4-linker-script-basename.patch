@@ -1,0 +1,19 @@
+--- ghc-9.8.4/rts/linker/Elf.c.orig	2024-11-27 22:03:57.000000000 +0000
++++ ghc-9.8.4/rts/linker/Elf.c	2026-07-10 15:29:54.169117145 +0000
+@@ -29,6 +29,7 @@
+ #include "linker/elf_util.h"
+ #include "linker/LoadNativeObjPosix.h"
+ 
++#include <libgen.h>
+ #include <fs_rts.h>
+ #include <link.h>
+ #include <stdlib.h>
+@@ -2186,7 +2187,7 @@
+             IF_DEBUG(linker, debugBelch("match%s\n",""));
+             line[match[2].rm_eo] = '\0';
+             stgFree((void*)*errmsg); // Free old message before creating new one
+-            r = loadNativeObj_POSIX(line+match[2].rm_so, errmsg);
++            r = loadNativeObj_POSIX(basename(line+match[2].rm_so), errmsg);
+             break;
+          }
+          // if control reaches here, no GROUP or INPUT ( ... ) directive
