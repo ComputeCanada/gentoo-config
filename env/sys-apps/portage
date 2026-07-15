@@ -1,0 +1,4 @@
+# need to prefix /usr/bin/env for subversion
+post_src_install() {
+	use prefix && sed -i "s@^#\!\(/usr/bin/env bash\)\$@#\!${EPREFIX}\1@g" "${ED}"/usr/lib/portage/python*/ebuild-helpers/xattr/install
+}
