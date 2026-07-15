@@ -1,0 +1,12 @@
+diff '--color=auto' -ur zig-0.15.1.orig/lib/std/zig/system.zig zig-0.15.1/lib/std/zig/system.zig
+--- zig-0.15.1.orig/lib/std/zig/system.zig	2025-08-19 23:24:32.000000000 +0000
++++ zig-0.15.1/lib/std/zig/system.zig	2026-07-14 13:02:38.228239736 +0000
+@@ -1103,7 +1103,7 @@
+         var file_name: []const u8 = switch (os.tag) {
+             // Since /usr/bin/env is hard-coded into the shebang line of many portable scripts, it's a
+             // reasonably reliable path to start with.
+-            else => "/usr/bin/env",
++            else => "/cvmfs/soft.computecanada.ca/gentoo/2026/x86-64-v3/usr/bin/env",
+             // Haiku does not have a /usr root directory.
+             .haiku => "/bin/env",
+         };

@@ -1,0 +1,46 @@
+src_compile() {
+	if use llvm; then
+		cmake_build zig2
+
+		if tc-is-cross-compiler; then
+			rm -rf "${BUILD_DIR}/zigcpp/" || die
+			rm -f "${BUILD_DIR}/config.h" || die
+
+			mv "${T}/target_zigcpp/" "${BUILD_DIR}/zigcpp/" || die
+			mv "${T}/target_config.h" "${BUILD_DIR}/config.h" || die
+		fi
+	else
+		cd "${BUILD_DIR}" || die
+		ln -s "${S}/stage1/" . || die
+		ln -s "${S}/src/" . || die
+		ln -s "${S}/lib/" . || die
+
+		local native_cc="$(tc-getBUILD_CC)"
+		"${native_cc}" -o bootstrap "${S}/bootstrap.c" || die "Zig's bootstrap.c compilation failed"
+		ZIG_HOST_TARGET_TRIPLE="${ZIG_HOST_AS_TARGET}" CC="${native_cc}" edo ./bootstrap
+	fi
+
+	cd "${BUILD_DIR}" || die
+	ZIG_EXE="./zig2" zig_src_compile --prefix stage3/ --sysroot "${EPREFIX}"
+
+	# Requires running stage3 which is built for cross-target.
+	if ! tc-is-cross-compiler; then
+		./stage3/bin/zig env || die "Zig compilation failed"
+
+		if use doc; then
+			ZIG_EXE="./stage3/bin/zig" zig_src_compile langref --prefix docgen/
+		fi
+	fi
+}
+
+src_install() {
+	use doc && local HTML_DOCS=( "${BUILD_DIR}/docgen/doc/langref.html" )
+
+	ZIG_EXE="./zig2" zig_src_install --sysroot "${EPREFIX}"
+
+	cd "${ED}/${ZIG_SYS_INSTALL_DEST}" || die
+	mv lib/zig/ lib2/ || die
+	rm -rf lib/ || die
+	mv lib2/ lib/ || die
+	dosym -r "${ZIG_SYS_INSTALL_DEST}/bin/zig" /usr/bin/zig-${PV}
+}

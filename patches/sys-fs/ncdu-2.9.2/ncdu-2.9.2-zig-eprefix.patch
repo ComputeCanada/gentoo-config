@@ -1,0 +1,12 @@
+Zig's internal linker doesn't work with Gentoo prefix, and can't find files in $EPREFIX/usr/lib64
+--- ncdu-2.9.2/build.zig.orig	2025-04-28 10:41:32.000000000 +0000
++++ ncdu-2.9.2/build.zig	2026-07-15 13:16:10.492373683 +0000
+@@ -25,6 +25,8 @@
+         .root_module = main_mod,
+     });
+     exe.pie = pie;
++    exe.addLibraryPath(.{ .cwd_relative = "/usr/lib64" });
++    exe.use_lld = true;
+     // https://github.com/ziglang/zig/blob/faccd79ca5debbe22fe168193b8de54393257604/build.zig#L745-L748
+     if (target.result.os.tag.isDarwin()) {
+         // useful for package maintainers

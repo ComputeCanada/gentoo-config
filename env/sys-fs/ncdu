@@ -1,0 +1,10 @@
+src_configure() {
+	local my_zbs_args=(
+		-Dpie=true
+		# Upstream recommends this default:
+		--release=fast
+		--sysroot "${EPREFIX}"
+	)
+
+	zig_src_configure
+}
