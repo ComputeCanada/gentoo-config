@@ -94,6 +94,8 @@ dev-libs/libgit2
 dev-libs/libmemcached
 dev-libs/libtar
 dev-libs/libzip
+dev-libs/nspr
+dev-libs/nss
 dev-libs/openssl-compat
 dev-libs/pugixml
 dev-libs/tinyxml
@@ -149,6 +151,7 @@ media-gfx/feh
 media-gfx/fig2dev
 media-gfx/gimp
 media-gfx/graphicsmagick
+media-gfx/graphviz
 
 media-libs/freeimage
 media-libs/glew
@@ -222,6 +225,7 @@ sys-fabric/opensm
 
 sys-fs/cryptsetup
 sys-fs/fuse
+sys-fs/fuse:0
 sys-fs/fuse-overlayfs
 sys-fs/ncdu
 sys-fs/squashfs-tools
