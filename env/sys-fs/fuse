@@ -1,0 +1,4 @@
+post_src_install() {
+	# can't have setuid-needing fusermount
+	rm "${ED}"/usr/bin/fusermount* || die
+}

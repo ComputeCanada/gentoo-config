@@ -225,7 +225,7 @@ sys-devel/mold::computecanada
 sys-fabric/opensm
 
 sys-fs/cryptsetup
-sys-fs/fuse::computecanada
+sys-fs/fuse
 sys-fs/fuse:0
 sys-fs/fuse-overlayfs
 sys-fs/ncdu
