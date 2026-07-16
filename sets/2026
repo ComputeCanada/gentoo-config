@@ -46,8 +46,8 @@ app-shells/bash-completion
 app-shells/fzf
 app-shells/ksh
 app-shells/pdsh
-app-shells/tcsh
-app-shells/zsh
+app-shells/tcsh::computecanada
+app-shells/zsh::computecanada
 app-shells/zsh-syntax-highlighting
 
 app-text/dos2unix
@@ -65,7 +65,7 @@ dev-cpp/gtkmm
 dev-cpp/highway
 dev-cpp/libxmlpp
 dev-cpp/nlohmann_json
-dev-cpp/xsd
+dev-cpp/xsd::computecanada
 dev-cpp/yaml-cpp
 
 dev-build/bmake
@@ -101,7 +101,7 @@ dev-libs/pugixml
 dev-libs/tinyxml
 dev-libs/tinyxml2
 dev-libs/xmlsec
-dev-libs/xqilla
+dev-libs/xqilla::computecanada
 
 dev-ml/opam
 
@@ -109,7 +109,7 @@ dev-python/cppheaderparser
 dev-python/docutils
 dev-python/pycodestyle
 dev-python/pyelftools
-dev-python/websockify
+dev-python/websockify::computecanada
 
 dev-ruby/gist
 
@@ -157,7 +157,7 @@ media-libs/freeimage
 media-libs/glew
 media-libs/glm
 media-libs/harfbuzz
-media-libs/libglvnd
+media-libs/libglvnd::computecanada
 media-libs/libpng-compat
 media-libs/libpulse
 media-libs/netpbm
@@ -179,17 +179,17 @@ net-analyzer/rrdtool
 net-analyzer/traceroute
 net-fs/sshfs
 net-ftp/lftp
-net-libs/libnsl-compat
+net-libs/libnsl-compat::computecanada
 net-libs/mbedtls
 net-libs/rpcsvc-proto
 net-libs/zeromq
-net-misc/bridge-utils
+net-misc/bridge-utils::computecanada
 net-misc/netkit-fingerd
 net-misc/rclone
 net-misc/rdesktop
 net-misc/telnet-bsd
 net-misc/tigervnc
-net-misc/turbovnc
+net-misc/turbovnc::computecanada
 
 sci-libs/szip
 sci-mathematics/z3
@@ -208,23 +208,24 @@ sys-apps/moreutils
 sys-apps/proot
 sys-apps/ripgrep
 
-sys-auth/munge
-sys-auth/nss-pam-ldapd
-sys-auth/sssd
+sys-auth/munge::computecanada
+sys-auth/nss-pam-ldapd::computecanada
+sys-auth/sssd::computecanada
 
-sys-cluster/easybuild
-sys-cluster/knem
-sys-cluster/lustre
+sys-cluster/easybuild::computecanada
+sys-cluster/knem::computecanada
+sys-cluster/lustre::computecanada
 sys-cluster/rdma-core
-sys-cluster/slurm-pmi
+sys-cluster/slurm-pmi::computecanada
 
+sys-devel/binutils-config::computecanada
 sys-devel/crossdev
-sys-devel/mold
+sys-devel/mold::computecanada
 
 sys-fabric/opensm
 
 sys-fs/cryptsetup
-sys-fs/fuse
+sys-fs/fuse::computecanada
 sys-fs/fuse:0
 sys-fs/fuse-overlayfs
 sys-fs/ncdu
@@ -232,7 +233,7 @@ sys-fs/squashfs-tools
 sys-fs/squashfuse
 
 sys-libs/ncurses-compat
-sys-libs/pam-compat
+sys-libs/pam-compat::computecanada
 
 sys-process/htop
 sys-process/lsof
@@ -254,13 +255,13 @@ x11-apps/xrandr
 x11-libs/gl2ps
 x11-libs/libGLw
 x11-libs/libxkbcommon
-x11-libs/libXp
+x11-libs/libXp::computecanada
 x11-libs/xcb-util-cursor
 x11-libs/xcb-util-image
 x11-libs/xcb-util-renderutil
 x11-libs/xcb-util-wm
 x11-misc/makedepend
-x11-misc/virtualgl
+x11-misc/virtualgl::computecanada
 x11-misc/xclip
 x11-misc/xvfb-run
 x11-terms/xterm
