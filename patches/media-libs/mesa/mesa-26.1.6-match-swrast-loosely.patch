@@ -1,11 +1,12 @@
 # Fixes: swrast fails to load with certain remote X servers
 # https://gitlab.freedesktop.org/mesa/mesa/issues/99
 # From Tom Hughes <tom@compton.nu>, June 2015
-# Adapted for later Mesa by Bart Oldeman <bart.oldeman@calculquebec.ca>, Sept 2019, Oct 2023
+# Adapted for later Mesa by Bart Oldeman <bart.oldeman@calculquebec.ca>, Sept 2019, Oct 2023, Aug 2026
 # Breaks "radeonsi" driver but this driver is not built by the easyconfig.
---- mesa-23.1.6/src/glx/dri_common.c.orig	2023-08-16 17:19:13.000000000 +0000
-+++ mesa-23.1.6/src/glx/dri_common.c	2023-11-02 15:06:29.377376832 +0000
-@@ -139,6 +139,36 @@
+diff -ur mesa-26.1.6.orig/src/glx/dri_common.c mesa-26.1.6/src/glx/dri_common.c
+--- mesa-26.1.6.orig/src/glx/dri_common.c	2026-07-29 17:31:27.000000000 +0000
++++ mesa-26.1.6/src/glx/dri_common.c	2026-08-12 23:43:29.758876480 +0000
+@@ -93,6 +93,36 @@
  }
  
  static int
@@ -39,10 +40,10 @@
 +}
 +
 +static int
- driConfigEqual(const __DRIcoreExtension *core,
-                struct glx_config *config, const __DRIconfig *driConfig)
+ driConfigEqual(struct glx_config *config, const struct dri_config *driConfig)
  {
-@@ -175,7 +205,36 @@
+    unsigned int attrib, value, glxValue;
+@@ -128,7 +158,36 @@
           if (value & __DRI_ATTRIB_TEXTURE_RECTANGLE_BIT)
              glxValue |= GLX_TEXTURE_RECTANGLE_BIT_EXT;
           if (config->bindToTextureTargets != GLX_DONT_CARE &&
