@@ -4,6 +4,3 @@ dev-lang/rust
 =dev-util/patchelf-0.18.0
 # mask newer nvtop (bug on A100)
 >sys-process/nvtop-3.1.0
-# https://bugs.gentoo.org/978982
-=gui-libs/libgedit-gtksourceview-299.7.0
-=gui-libs/libgedit-tepl-6.14.0
