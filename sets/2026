@@ -232,8 +232,10 @@ sys-fs/ncdu
 sys-fs/squashfs-tools
 sys-fs/squashfuse
 
+sys-libs/minizip-ng
 sys-libs/ncurses-compat
 sys-libs/pam-compat::computecanada
+sys-libs/zlib-ng
 
 sys-process/htop
 sys-process/lsof
