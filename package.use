@@ -63,6 +63,7 @@ sys-devel/gcc -pie -ssp graphite jit openmp
 sys-devel/gettext openmp
 
 sys-fs/e2fsprogs fuse
+sys-fs/udisks -elogind -daemon
 
 sys-libs/glibc gd
 sys-libs/minizip-ng compat
@@ -84,7 +85,6 @@ dev-libs/glib selinux
 x11-libs/libxcb selinux
 app-editors/gvim selinux
 media-libs/mesa selinux
-sys-auth/elogind selinux
 sys-process/procps selinux
 app-editors/emacs selinux jit
 
