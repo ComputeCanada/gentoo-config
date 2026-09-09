@@ -17,6 +17,7 @@ app-containers/crun
 app-containers/netavark
 app-containers/slirp4netns
 
+app-crypt/libsecret::computecanada
 app-crypt/mit-krb5
 
 app-editors/gedit
@@ -42,7 +43,7 @@ app-portage/pfl
 app-portage/prefix-toolkit
 
 app-shells/autojump
-app-shells/bash-completion
+app-shells/bash-completion::computecanada
 app-shells/fzf
 app-shells/ksh
 app-shells/pdsh
@@ -123,6 +124,7 @@ dev-util/diffstat
 dev-util/google-perftools
 dev-util/gtk-builder-convert
 dev-util/numdiff
+=dev-util/patchutils-0.4.2
 dev-util/perf
 dev-util/spirv-tools
 dev-util/vulkan-tools

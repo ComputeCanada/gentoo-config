@@ -57,6 +57,8 @@ net-misc/turbovnc -viewer
 net-nds/openldap minimal
 
 sys-apps/duc -tokyocabinet gui
+sys-apps/pciutils -kmod
+sys-apps/systemd-utils -kmod
 sys-apps/util-linux caps fdformat
 
 sys-auth/munge gcrypt
