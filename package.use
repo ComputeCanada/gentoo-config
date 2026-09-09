@@ -25,6 +25,8 @@ dev-python/pillow -truetype
 dev-util/desktop-file-utils -emacs
 dev-util/perf -libtracefs slang
 
+dev-vcs/git tk
+
 mate-base/mate -extras
 mate-base/mate-applets -upower
 
