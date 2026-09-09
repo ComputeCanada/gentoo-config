@@ -25,6 +25,9 @@ dev-python/pillow -truetype
 dev-util/desktop-file-utils -emacs
 dev-util/perf -libtracefs slang
 
+mate-base/mate -extras
+mate-base/mate-applets -upower
+
 media-gfx/gimp LUA_SINGLE_TARGET: luajit
 media-gfx/graphviz gts
 media-gfx/imagemagick postscript

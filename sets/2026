@@ -140,6 +140,16 @@ mail-filter/procmail
 mail-mta/msmtp
 
 mate-base/mate
+# extras for mate, but no mate-power-manager
+app-arch/engrampa
+app-editors/pluma
+app-text/atril
+mate-extra/caja-extensions
+mate-extra/mate-calc
+mate-extra/mate-screensaver
+mate-extra/mate-system-monitor
+mate-extra/mate-utils
+media-gfx/eom
 
 media-fonts/dejavu
 media-fonts/font-adobe-100dpi
