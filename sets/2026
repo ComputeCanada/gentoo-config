@@ -214,6 +214,7 @@ sys-auth/sssd::computecanada
 
 sys-cluster/easybuild::computecanada
 sys-cluster/knem::computecanada
+sys-cluster/lmod::computecanada
 sys-cluster/lustre::computecanada
 sys-cluster/rdma-core
 sys-cluster/slurm-pmi::computecanada

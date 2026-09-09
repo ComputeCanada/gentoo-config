@@ -22,5 +22,6 @@ net-misc/turbovnc ~amd64
 sys-apps/duc ~amd64
 sys-apps/proot ~amd64
 sys-cluster/knem ~amd64
+sys-cluster/lmod ~amd64
 sys-devel/nvptx-tools ~amd64
 x11-wm/xpra ~amd64

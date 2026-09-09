@@ -17,6 +17,7 @@ dev-lang/ruby -rdoc
 dev-libs/libdbusmenu gtk3
 dev-libs/libnl utils
 dev-libs/libpcre2 pcre32
+dev-libs/libpeas LUA_SINGLE_TARGET: lua5-1
 dev-libs/nss utils
 
 dev-python/pillow -truetype
@@ -24,6 +25,7 @@ dev-python/pillow -truetype
 dev-util/desktop-file-utils -emacs
 dev-util/perf -libtracefs slang
 
+media-gfx/gimp LUA_SINGLE_TARGET: luajit
 media-gfx/graphviz gts
 media-gfx/imagemagick postscript
 
@@ -95,12 +97,16 @@ net-libs/mbedtls static-libs
 
 virtual/imagemagick-tools postscript
 
+www-client/elinks LUA_SINGLE_TARGET: -lua5-4 lua5-1
+
 x11-base/xorg-server xvfb
 
 x11-wm/xpra -crypt
 
 */* INPUT_DEVICES: -*
 */* L10N: en fr
+*/* LUA_TARGETS: lua5-4
+*/* LUA_SINGLE_TARGET: -* lua5-4
 */* PYTHON_TARGETS: -* python3_14
 */* PYTHON_SINGLE_TARGET: -* python3_14
 */* VIDEO_CARDS: -* virgl amdgpu
