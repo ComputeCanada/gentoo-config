@@ -1,5 +1,6 @@
 app-arch/brotli static-libs
 
+app-editors/neovim LUA_SINGLE_TARGET: lua5-1
 app-editors/vim -X cscope gpm lua perl python ruby
 
 app-portage/portage-utils openmp
