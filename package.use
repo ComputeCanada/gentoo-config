@@ -21,7 +21,7 @@ dev-libs/libpcre2 pcre32
 dev-libs/libpeas LUA_SINGLE_TARGET: lua5-1
 dev-libs/nss utils
 
-dev-lua/luv LUA_SINGLE_TARGET: lua5-1
+dev-lua/luv LUA_SINGLE_TARGET: -lua5-4 lua5-1
 
 dev-python/pillow -truetype
 
