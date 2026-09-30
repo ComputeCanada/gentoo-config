@@ -6,6 +6,7 @@ app-text/pandoc-cli ~amd64
 dev-haskell/* ~amd64
 dev-lang/ghc ~amd64
 dev-libs/libdwarf ~amd64
+dev-lua/luv ~amd64
 dev-python/cppheaderparser ~amd64
 dev-python/fastbencode ~amd64
 dev-python/gst-python ~amd64
