@@ -1,6 +1,6 @@
 app-arch/brotli static-libs
 
-app-editors/neovim LUA_SINGLE_TARGET: lua5-1
+app-editors/neovim LUA_SINGLE_TARGET: luajit
 app-editors/vim -X cscope gpm lua perl python ruby
 
 app-portage/portage-utils openmp
@@ -21,7 +21,7 @@ dev-libs/libpcre2 pcre32
 dev-libs/libpeas LUA_SINGLE_TARGET: lua5-1
 dev-libs/nss utils
 
-dev-lua/luv LUA_SINGLE_TARGET: -lua5-4 lua5-1
+dev-lua/luv LUA_SINGLE_TARGET: -lua5-4 luajit
 
 dev-python/pillow -truetype
 
