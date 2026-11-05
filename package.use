@@ -70,6 +70,8 @@ sys-auth/munge gcrypt
 sys-auth/nss-pam-ldapd -nslcd
 sys-auth/sssd -daemon -man
 
+sys-cluser/lmod -cache
+
 sys-devel/binutils gprofng
 sys-devel/gcc -pie -ssp graphite jit openmp
 sys-devel/gettext openmp
